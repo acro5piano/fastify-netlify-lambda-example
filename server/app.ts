@@ -18,6 +18,7 @@ export const app = Fastify({ logger: true })
 
 app.register(fastifyCors)
 app.register(mercurius, {
+  prefix: '/.netlify/functions',
   schema,
   resolvers,
 })
