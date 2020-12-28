@@ -6,7 +6,7 @@ const gql = ([a]: any) => a
 test('app', async (t) => {
   const res = await app
     .inject()
-    .post('/graphql')
+    .post('/.netlify/functions/graphql')
     .body({
       query: gql`
         query {
