@@ -1,0 +1,9 @@
+[build]
+  functions = "lambda"
+  publish = "build"
+  command = "yarn build"
+
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
