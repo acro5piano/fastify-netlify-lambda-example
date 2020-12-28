@@ -1,0 +1,64 @@
+{
+  "name": "front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "apollo": "apollo client:codegen --target typescript",
+    "r": "ts-node -O '{\"module\":\"commonjs\"}' -T -r dotenv/config",
+    "start": "npm-run-all --parallel start:react start:server",
+    "start:react": "TSC_COMPILE_ON_ERROR=true react-scripts start",
+    "start:server": "./dev.sh",
+    "build": "npm-run-all build:*",
+    "build:react": "react-scripts build",
+    "build:server": "tsc -p tsconfig.server.json",
+    "lint": "eslint src",
+    "test": "react-scripts test && ava",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/sinon": "^9.0.9",
+    "aws-lambda-fastify": "^1.4.4",
+    "fastify": "^3.9.1",
+    "fastify-cors": "^5.1.0",
+    "graphql": "^15.4.0",
+    "mercurius": "^6.4.0",
+    "npm-run-all": "^4.1.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "source-map-support": "^0.5.19",
+    "typescript": "^4.1.2",
+    "urql": "^1.11.4",
+    "web-vitals": "^0.2.4"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "ava": "^3.13.0",
+    "nodemon": "^2.0.6",
+    "sinon": "^9.2.2",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
