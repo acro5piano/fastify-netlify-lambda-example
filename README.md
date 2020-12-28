@@ -1,6 +1,6 @@
 # fastify-netlify-lambda-example
 
-A reservation system which aims to show the following serverless stuck:
+Show the following serverless stuck:
 
 **Infrastructure**
 
